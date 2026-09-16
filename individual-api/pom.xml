@@ -41,12 +41,6 @@
 
 	<dependencies>
 
-		<!-- H2 Console: permite acessar o console web do banco H2 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-h2console</artifactId>
-		</dependency>
-
 		<!-- JDBC: acesso ao banco de dados usando JdbcTemplate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -57,13 +51,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
-		</dependency>
-
-		<!-- H2: banco de dados em memória -->
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 
 		<!-- MySQL: driver para conexão com banco MySQL -->
@@ -92,14 +79,6 @@
 			<groupId>me.paulschwarz</groupId>
 			<artifactId>springboot4-dotenv</artifactId>
 			<version>5.1.0</version>
-		</dependency>
-
-		<!-- Swagger/OpenAPI: documentação interativa da API -->
-		<!-- Acesse em: http://localhost:8080/swagger-ui.html -->
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>3.0.3</version>
 		</dependency>
 
 	</dependencies>

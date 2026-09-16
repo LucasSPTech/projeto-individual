@@ -23,7 +23,7 @@ public class TravelRepository {
     }
 
     public Integer save(Travels travel) {
-        String sql = "INSERT INTO Travels (destination, departure, companions, memories) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Travels (destination, departure, companions, review, memories) VALUES (?, ?, ?, ?, ?)";
         try {
             KeyHolder keyHolder = new GeneratedKeyHolder();
             jdbcTemplate.update(con -> {
@@ -31,7 +31,8 @@ public class TravelRepository {
                 ps.setString(1, travel.getDestination());
                 ps.setObject(2, travel.getDeparture());
                 ps.setString(3, travel.getCompanions());
-                ps.setString(4, travel.getMemories());
+                ps.setInt(4, travel.getReview());
+                ps.setString(5, travel.getMemories());
                 return ps;
             }, keyHolder);
 

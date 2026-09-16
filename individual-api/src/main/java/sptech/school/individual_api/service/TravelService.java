@@ -19,11 +19,13 @@ public class TravelService {
     }
 
     public Integer register(TravelRequest request) {
-        if (request.getDestination() == null || request.getDestination().isBlank() || request.getDeparture() == null) {
-            throw new InvalidRequestException("The fields Destination and Departure Data cannot be empty or null");
+        if (request.getDestination() == null || request.getDestination().isBlank() || request.getDeparture() == null ||
+                (request.getReview() != null && (request.getReview() < 0 || request.getReview() > 5))) {
+
+            throw new InvalidRequestException("Destination and Departure Date cannot be empty or null, and Review must be between 0 and 5");
         }
 
-        Travels travel = new Travels(request.getDestination(), request.getDeparture(), request.getCompanions(), request.getMemories());
+        Travels travel = new Travels(request.getDestination(), request.getDeparture(), request.getCompanions(), request.getReview(), request.getMemories());
         return travelRepository.save(travel);
     }
 

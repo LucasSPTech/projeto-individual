@@ -7,15 +7,17 @@ public class TravelRequest {
     private String destination;
     private LocalDate departure;
     private String companions;
+    private Integer review;
     private String memories;
 
     public TravelRequest() {
     }
 
-    public TravelRequest(String destination, LocalDate departure, String companions, String memories) {
+    public TravelRequest(String destination, LocalDate departure, String companions, Integer review, String memories) {
         this.destination = destination;
         this.departure = departure;
         this.companions = companions;
+        this.review = review;
         this.memories = memories;
     }
 
@@ -41,6 +43,14 @@ public class TravelRequest {
 
     public void setCompanions(String companions) {
         this.companions = companions;
+    }
+
+    public Integer getReview() {
+        return review;
+    }
+
+    public void setReview(Integer review) {
+        this.review = review;
     }
 
     public String getMemories() {

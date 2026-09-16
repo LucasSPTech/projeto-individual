@@ -7,23 +7,26 @@ public class Travels {
     private String destination;
     private LocalDate departure;
     private String companions;
+    private Integer review;
     private String memories;
 
     public Travels() {
     }
 
-    public Travels(String destination, LocalDate departure, String companions, String memories) {
+    public Travels(String destination, LocalDate departure, String companions, Integer review, String memories) {
         this.destination = destination;
         this.departure = departure;
         this.companions = companions;
+        this.review = review;
         this.memories = memories;
     }
 
-    public Travels(Integer id, String destination, LocalDate departure, String companions, String memories) {
+    public Travels(Integer id, String destination, LocalDate departure, String companions, Integer review, String memories) {
         this.id = id;
         this.destination = destination;
         this.departure = departure;
         this.companions = companions;
+        this.review = review;
         this.memories = memories;
     }
 
@@ -57,6 +60,14 @@ public class Travels {
 
     public void setCompanions(String companions) {
         this.companions = companions;
+    }
+
+    public Integer getReview() {
+        return review;
+    }
+
+    public void setReview(Integer review) {
+        this.review = review;
     }
 
     public String getMemories() {
